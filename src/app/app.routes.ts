@@ -12,22 +12,27 @@ export const routes: Routes = [
   },
   {
     path: 'detail',
-    loadComponent: () => import('./detail/detail.page').then( m => m.DetailPage)
+    loadComponent: () =>
+      import('./detail/detail.page').then((m) => m.DetailPage),
   },
   {
     path: 'categories',
-    loadComponent: () => import('./categories/categories.page').then( m => m.CategoriesPage)
+    loadComponent: () =>
+      import('./categories/categories.page').then((m) => m.CategoriesPage),
   },
   {
     path: 'profile',
-    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
+    loadComponent: () =>
+      import('./profile/profile.page').then((m) => m.ProfilePage),
   },
   {
     path: 'favorites',
-    loadComponent: () => import('./favorites/favorites.page').then( m => m.FavoritesPage)
+    loadComponent: () =>
+      import('./favorites/favorites.page').then((m) => m.FavoritesPage),
   },
   {
     path: 'search',
-    loadComponent: () => import('./search/search.page').then( m => m.SearchPage)
+    loadComponent: () =>
+      import('./search/search.page').then((m) => m.SearchPage),
   },
 ];

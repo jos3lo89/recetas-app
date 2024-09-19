@@ -1,0 +1,19 @@
+ion-header ion-toolbar {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+// .logo {
+//   /* Estilos adicionales para el logo si es necesario */
+// }
+
+// .user-menu {
+//   /* Estilos adicionales para el menú de usuario si es necesario */
+// }

@@ -4,8 +4,7 @@ import {
   IonRouterOutlet,
   IonContent,
   IonHeader,
-  IonFooter,
-} from '@ionic/angular/standalone';
+  IonFooter, IonToolbar, IonTitle } from '@ionic/angular/standalone';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -13,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
-  imports: [
+  imports: [IonTitle, IonToolbar,
     IonFooter,
     IonHeader,
     IonContent,

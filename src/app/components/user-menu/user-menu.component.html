@@ -1,16 +1,12 @@
-
-
-
-@if (isAtuh) {
-  <ion-avatar>
-    <img
-      alt="Silhouette of a person's head"
-      src="https://avatars.githubusercontent.com/u/126422481?v=4"
-    />
-  </ion-avatar>
-
-
-} @else {
-
-  <p>Inicar sesion</p>
-}
+<div class="user-menu-container">
+  @if (isAtuh) {
+    <ion-avatar [routerLink]="['/profile']">
+      <img
+        alt="Avatar del usuario"
+        src="https://avatars.githubusercontent.com/u/126422481?v=4"
+      />
+    </ion-avatar>
+  } @else {
+    <ion-button fill="clear">Iniciar sesión</ion-button>
+  }
+</div>

@@ -1,0 +1,13 @@
+.user-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+ion-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+ion-button {
+  --color: var(--ion-color-primary);
+}

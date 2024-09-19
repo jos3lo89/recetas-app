@@ -13,7 +13,7 @@ import {
 } from '@ionic/angular/standalone';
 
 import { addIcons } from 'ionicons';
-import { library, playCircle, radio, search, home } from 'ionicons/icons';
+import { library, playCircle, radio, search, home, person, homeOutline, albumsOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-navigation',
@@ -35,7 +35,7 @@ import { library, playCircle, radio, search, home } from 'ionicons/icons';
 })
 export class NavigationComponent implements OnInit {
   constructor() {
-    addIcons({ library, playCircle, radio, search, home });
+    addIcons({homeOutline,albumsOutline,search,person,library,playCircle,radio,home});
   }
 
   ngOnInit() {}

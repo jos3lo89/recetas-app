@@ -10,7 +10,9 @@ ion-header {
 
 ion-content {
   flex: 1 0 auto;
-  overflow: auto;
+  // overflow: auto;
+  overflow-y: auto;
+
 }
 
 ion-footer {
