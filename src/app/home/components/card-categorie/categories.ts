@@ -6,7 +6,7 @@ export interface Categories {
 
 export const categorias: Categories[] = [
   {
-    name: 'Arroz',
+    name: 'Arroz qwrqwrwrqwe',
     foto: 'https://www.recetasnestle.com.pe/sites/default/files/styles/carrossel_icone_images_/public/2022-10/arroz%201.webp?itok=isz6MQpq',
     detalles: 'Platos corroz ricos',
   },
