@@ -1,5 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonListHeader, IonItem, IonLabel, IonList, IonCol, IonGrid, IonRow } from "@ionic/angular/standalone";
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCardContent,
+  IonListHeader,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonCol,
+  IonGrid,
+  IonRow,
+} from '@ionic/angular/standalone';
 import { categorias } from './categories';
 
 @Component({
@@ -7,15 +20,25 @@ import { categorias } from './categories';
   templateUrl: './card-categorie.component.html',
   styleUrls: ['./card-categorie.component.scss'],
   standalone: true,
-  imports: [IonRow, IonGrid, IonCol, IonList, IonLabel, IonItem, IonListHeader, IonCardContent, IonCardTitle, IonCard, IonCardHeader, IonCardSubtitle]
+  imports: [
+    IonRow,
+    IonGrid,
+    IonCol,
+    IonList,
+    IonLabel,
+    IonItem,
+    IonListHeader,
+    IonCardContent,
+    IonCardTitle,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
+  ],
 })
 export class CardCategorieComponent implements OnInit {
-
-
-  categorias = categorias
+  categorias = categorias;
 
   constructor() {}
-
 
   ngOnInit() {}
 }
