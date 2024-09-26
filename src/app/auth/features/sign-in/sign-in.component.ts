@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { hasEmailError, isRequired } from '../../utils/validators';
-import { IonButton, IonInput } from '@ionic/angular/standalone';
+import { IonButton, IonInput, IonContent } from '@ionic/angular/standalone';
 import { GoogleButtonComponent } from '../../ui/google-button/google-button.component';
 
 interface FormSignUp {
@@ -22,7 +22,7 @@ interface FormSignUp {
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
   standalone: true,
-  imports: [IonButton, IonInput, ReactiveFormsModule, GoogleButtonComponent],
+  imports: [IonContent, IonButton, IonInput, ReactiveFormsModule, GoogleButtonComponent],
 })
 export default class SignInComponent implements OnInit {
   constructor(private toastController: ToastController) {}

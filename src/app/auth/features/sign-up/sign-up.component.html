@@ -1,32 +1,34 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
-  <ion-input
-    formControlName="email"
-    placeholder="Correo electronico"
-    type="email"
-  >
-  </ion-input>
-  @if (isRequired( "email" )) {
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <ion-input
+      formControlName="email"
+      placeholder="Correo electronico"
+      type="email"
+    >
+    </ion-input>
+    @if (isRequired( "email" )) {
 
-  <small class="text-warning">Este campo es requerido</small>
+    <small class="text-warning">Este campo es requerido</small>
 
-  } @if(isEmailRequired()) {
+    } @if(isEmailRequired()) {
 
-  <small class="text-warning">El correo debe ser valido</small>
-  }
+    <small class="text-warning">El correo debe ser valido</small>
+    }
 
-  <ion-input
-    formControlName="password"
-    placeholder="Contraseña"
-    type="password"
-  >
-  </ion-input>
+    <ion-input
+      formControlName="password"
+      placeholder="Contraseña"
+      type="password"
+    >
+    </ion-input>
 
-  @if (isRequired( "password" )) {
+    @if (isRequired( "password" )) {
 
-  <small class="text-warning">Este campo es requerido</small>
+    <small class="text-warning">Este campo es requerido</small>
 
-  }
+    }
 
-  <ion-button type="submit">Registrate</ion-button>
-  <app-google-button (clickeame)="submitWithGoogle()" />
-</form>
+    <ion-button type="submit">Registrate</ion-button>
+    <app-google-button (clickeame)="submitWithGoogle()" />
+  </form>
+</ion-content>

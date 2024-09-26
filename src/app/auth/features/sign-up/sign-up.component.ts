@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { IonInput, IonButton, IonToast } from '@ionic/angular/standalone';
+import { IonInput, IonButton, IonToast, IonContent } from '@ionic/angular/standalone';
 import {
   FormBuilder,
   FormControl,
@@ -22,7 +22,7 @@ interface FormSignUp {
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
   standalone: true,
-  imports: [
+  imports: [IonContent,
     IonToast,
     IonButton,
     IonInput,
