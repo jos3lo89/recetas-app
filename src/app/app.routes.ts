@@ -1,42 +1,36 @@
 import { Routes } from '@angular/router';
+import { privateGuard, publicGuard } from './core/auth.guard';
 
 export const routes: Routes = [
-  {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
-  },
+  /* ******** RUTAS LIBRES ******** */
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pages/home',
     pathMatch: 'full',
   },
   {
-    path: 'detail',
-    loadComponent: () =>
-      import('./detail/detail.page').then((m) => m.DetailPage),
+    path: 'pages',
+    loadChildren: () => import('./pages/routes/pages.routes'),
   },
+
+  /* ******** RUTAS PUBLICAS ******** */
   {
-    path: 'categories',
-    loadComponent: () =>
-      import('./categories/categories.page').then((m) => m.CategoriesPage),
+    canActivateChild: [publicGuard()],
+    path: 'auth',
+    loadChildren: () => import('./auth/features/auth.routes'),
   },
+
+  /* ******** RUTAS PRIVADAS ******** */
   {
-    path: 'profile',
-    loadComponent: () =>
-      import('./profile/profile.page').then((m) => m.ProfilePage),
+    canActivate: [privateGuard()],
+    path: 'private',
+    loadChildren: () => import('./pages/private/private.routes'),
   },
+
+  /* ******** All routes ******** */
+
   {
-    path: 'favorites',
-    loadComponent: () =>
-      import('./favorites/favorites.page').then((m) => m.FavoritesPage),
-  },
-  {
-    path: 'search',
-    loadComponent: () =>
-      import('./search/search.page').then((m) => m.SearchPage),
-  },
-  {
-    path: 'login',
-    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
+    path: '**',
+    redirectTo: '/pages/home',
   },
 ];
