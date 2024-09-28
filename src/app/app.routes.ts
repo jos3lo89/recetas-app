@@ -10,7 +10,11 @@ export const routes: Routes = [
   },
   {
     path: 'pages',
-    loadChildren: () => import('./pages/routes/pages.routes'),
+    loadChildren: () => import('./pages/pages.routes'),
+  },
+  {
+    path: 'receta',
+    loadChildren: () => import('./recetas/recetas.routes'),
   },
 
   /* ******** RUTAS PUBLICAS ******** */
